@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(214, 212, 212);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .welcome-message {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo/GuardianCare logo.PNG" class="logo" width="30%" min-width="300px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i id="bar" class="fas fa-bars"></i></span>
+            </button>
+            <section id="header">
+                <a href="#"><img src="images/logo/GuardianCare logo.PNG" class="logo" width="30%" min-width="300px" alt=""></a>
+            </section>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mood-tracker.html">Mood Tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donations.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="respite-centers.html">Daily Planner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="support-groups.html">Journal</a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </nav> 
+
+    <div class="container">
+        <h1>Welcome</h1>
+        <div class="welcome-message">
+            <?php
+            // Retrieve the user's name from the query parameter
+            $name = $_GET['name'];
+            echo "<p>Dear $name, welcome to our website!</p>";
+            ?>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="startTour()">Start Tour</button>
+    </div>
+
+    <script>
+        function startTour() {
+            // Redirect the user to the tour page
+            window.location.href = "tour.html";
+        }
+    </script>
+</body>
+</html>
